@@ -1,0 +1,56 @@
+{
+    "name": "mkdoc",
+    "version": "1.0.0",
+    "description": "Js markdown to html compiler",
+    "author": "Saidimu Lolokile",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "build": "mocha",
+        "ci": "yarn install --frozen-lockfile"
+    },
+    "dependencies": {
+        "handlebars": "^4.7.7",
+        "js-yaml": "^4.1.0",
+        "marked": "^4.0.0",
+        "jsdom": "^18.0.1"
+    },
+    "bin": {
+        "mkdoc": "./bin/mkdoc"
+    },
+    "devDependencies": {
+        "@semantic-release/changelog": "^6.0.1",
+        "@semantic-release/commit-analyzer": "^9.0.1",
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/release-notes-generator": "^10.0.2",
+        "mocha": "^9.1.3",
+        "chai": "^4.3.4",
+        "prettier": "^2.4.1",
+        "semantic-release": "^18.0.0"
+    },
+    "release": {
+        "branches": [
+            "main"
+        ],
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            [
+                "@semantic-release/changelog",
+                {
+                    "changelogFile": "CHANGELOG.md"
+                }
+            ],
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "CHANGELOG.md"
+                    ]
+                }
+            ]
+        ]
+    }
+}

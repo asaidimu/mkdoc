@@ -1,0 +1,5 @@
+public/*/*.min.*
+public/css/*
+public/js/*/*.min.js
+public/js/vendor/*.js
+public/js/\*.js
