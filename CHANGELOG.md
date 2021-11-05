@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/augustinesaidimu/mkdoc/compare/v1.0.1...v1.0.2) (2021-11-05)
+
+
+### Bug Fixes
+
+* refactored code ([65bff9e](https://github.com/augustinesaidimu/mkdoc/commit/65bff9efb29b160d92db0552c15fb3f1ec3cefbf))
+
 ## [1.0.1](https://github.com/augustinesaidimu/mkdoc/compare/v1.0.0...v1.0.1) (2021-11-03)
 
 
