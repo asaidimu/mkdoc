@@ -11,8 +11,8 @@ export const generateDocument = async ({ path = '.', tag = 'v1.0.0' } = {}) => {
 
     const config = await readConfig()
     const index = await readIndex()
-    const chapters = []
 
+    const chapters = []
     for (const name of config.chapters) {
         chapters.push(await readChapter({ name }))
     }
