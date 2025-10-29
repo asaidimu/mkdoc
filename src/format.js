@@ -2,10 +2,11 @@ export const Format = ({ logger }) => {
     const format = {
         list_item: (id) => `<li><a href="#${id}"></a></li>`,
         sublist: (acc, curr, index, { length }) => {
+            acc = acc.concat(curr)
             if (index === length - 1) {
-                return `<li class="sublist"> <ul> ${acc}${curr} </ul> </li>`
+                return `<li class="sublist"> <ul> ${acc} </ul> </li>`
             } else {
-                return acc.concat(curr)
+                return acc
             }
         },
         chapter: (chapter) => `<article class="chapter">${chapter}</article>`,
